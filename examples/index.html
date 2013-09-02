@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>attricon example</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <script src="/lib/bower_components/requirejs/require.js" data-main="main"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>attricon (attribute + icon)</h1>
+      <h3 id="status-header">Status </h3>
+      <form id="status-form" role="form">
+        <label class="radio-inline">
+          <input type="radio" name="status" value="pending"/> Pending
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="status" value="success"/> Success
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="status" value="error"/> Error
+        </label>
+      </form>
+      <h3 id="os-header">os </h3>
+      <form id="os-form" role="form">
+        <label class="radio-inline">
+          <input type="radio" name="os" value="linux"/> Linux
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="os" value="android"/> Android
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="os" value="apple"/> Apple
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="os" value="windows"/> Windows
+        </label>
+      </form>
+    </div>
+  </body>
+</html>

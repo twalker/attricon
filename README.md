@@ -1,4 +1,4 @@
 attricon
 ========
 
-An icon view bound to a model attribute
+An miniscule Backbone view that binds an **icon** className to a model **attr**ibute.
