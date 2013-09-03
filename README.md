@@ -40,6 +40,11 @@ It can be provided as:
 * An extended map. `Attricon.MyMap = {'none': 'icon-star-empty', 'half': 'icon-star-half-empty',...}`
 * An instance level option.
 
+## dependencies
+
+* backbone
+* requirejs
+
 ## demo
 
 `bower install`
