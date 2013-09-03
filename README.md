@@ -6,6 +6,7 @@ An miniscule Backbone view that binds an **icon-** className to the value of a m
 It's useful with a pre-defined set of attribute values that pair nicely with an icon from Font Awesome (or other).
 E.g. Status, OS icons.
 
+What can I say, it scratched a small itch.
 
 ## example
 
@@ -44,3 +45,9 @@ It can be provided as:
 `bower install`
 
 Browse to /examples/index.html
+
+## install
+
+Just clone or fork.
+
+If attricon is actually useful to anyone, I'll register it with bower so it can be installed properly.
