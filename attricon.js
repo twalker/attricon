@@ -6,8 +6,7 @@
  *         iconMap An object that maps the attribute value to an icon.
  */
 define(function(require){
-  var Backbone = require('backbone')
-    , _ = require('underscore');
+  var Backbone = require('backbone');
 
   var Attricon = Backbone.View.extend({
     tagName: 'i',
@@ -22,7 +21,9 @@ define(function(require){
         this.addIcon(value);
       });
 
-      this.addIcon(this.model.get(options.attribute));
+      if(this.model.has(options.attribute)){
+        this.addIcon(this.model.get(options.attribute));
+      }
     },
 
     addIcon: function(value){
