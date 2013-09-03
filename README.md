@@ -36,7 +36,7 @@ What can I say, it scratched a small itch.
 The `iconMap` is a plain object mapping values (keys) to classNames (values).
 It can be provided as:
 
-* A pre-defined map. `Attricon.Status` and `Attricon.OS` are provided to as samples.
+* A pre-defined map. `Attricon.Status` and `Attricon.OS` are provided as samples.
 * An extended map. `Attricon.MyMap = {'none': 'icon-star-empty', 'half': 'icon-star-half-empty',...}`
 * An instance level option.
 
