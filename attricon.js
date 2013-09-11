@@ -10,11 +10,14 @@
   if (typeof define === 'function' && define.amd) {
     // AMD
     define(['backbone'], factory);
+  } else if (typeof exports === 'object') {
+    // Node
+    module.exports = factory(require('backbone'));
   } else {
     // Browser globals
     root.Attricon = factory(root.Backbone);
   }
-}(this, function (Backbone) {
+}(this, function(Backbone){
 
   // Default function to transform from raw value to icon key;
   var fromRaw = function fromRaw(value){
