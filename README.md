@@ -5,7 +5,7 @@ An miniscule Backbone view that binds an **icon-** className to the value of a m
 
 It's useful with a pre-defined set of attribute values that pair nicely with an icon from Font Awesome (or other).
 
-Status, or OS icons for example:
+Status, or OS icons for example:  
 ![attricon](https://raw.github.com/twalker/attricon/master/examples/attricon-example.png "Demo")
 
 What can I say, it scratched a small itch.
@@ -36,10 +36,10 @@ What can I say, it scratched a small itch.
 
 ### options
 
-**model**: the target model.
-**attribute**: The model attribute containing the source value (key).
-**iconMap**: a plain object mapping values (keys) to classNames (values).
-It can be provided as:
+**model**: the target model.  
+**attribute**: The model attribute containing the source value (key).  
+**iconMap**: a plain object mapping values (keys) to classNames (values).  
+iconMap can be provided as:  
 
 * A pre-defined map. `Attricon.Status` and `Attricon.OS` are provided as samples.
 * An extended map. `Attricon.MyMap = {'none': 'icon-star-empty', 'half': 'icon-star-half-empty',...}`
