@@ -29,7 +29,7 @@ What can I say, it scratched a small itch.
     console.log(statusIcon.el);
     // <i class="icon-spinner icon-spin"></i>
 
-    model.set('status', 'success');
+    model.set('status', 'succeeded');
 
     console.log(statusIcon.el);
     // <i class="icon-check"></i>
