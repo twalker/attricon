@@ -6,8 +6,15 @@
  *         iconMap An object that maps the attribute value to an icon.
  *         formRaw A function to map a raw attribute value to a icon key.
  */
-define(function(require){
-  var Backbone = require('backbone');
+(function (root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD
+    define(['backbone'], factory);
+  } else {
+    // Browser globals
+    root.Attricon = factory(root.Backbone);
+  }
+}(this, function (Backbone) {
 
   // Default function to transform from raw value to icon key;
   var fromRaw = function fromRaw(value){
@@ -57,4 +64,5 @@ define(function(require){
   });
 
   return Attricon;
-});
+
+}));
