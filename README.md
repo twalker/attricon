@@ -5,7 +5,7 @@ An miniscule Backbone view that binds an **icon-** className to the value of a m
 
 It's useful with a pre-defined set of attribute values that pair nicely with an icon from Font Awesome (or other).
 
-Status, or OS icons for example:
+Status, or OS icons for example:  
 ![attricon](https://raw.github.com/twalker/attricon/master/examples/attricon-example.png "Demo")
 
 What can I say, it scratched a small itch.
