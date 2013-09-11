@@ -33,6 +33,7 @@ require(['jquery', 'backbone', 'attricon'], function($, Backbone, Attricon){
 
     $('#status-header').append(statusIcon.render().el);
     $('#status-form input').on('change', function(e){
+      // icon will update on model attribute change event.
       model.set('status', e.currentTarget.value);
     });
 

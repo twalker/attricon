@@ -4,9 +4,15 @@
  *         model The model to bind to.
  *         attribute The attribute of the model to map to an icon.
  *         iconMap An object that maps the attribute value to an icon.
+ *         formRaw A function to map a raw attribute value to a icon key.
  */
 define(function(require){
   var Backbone = require('backbone');
+
+  // Default function to transform from raw value to icon key;
+  var fromRaw = function fromRaw(value){
+    return value.toString();
+  };
 
   var Attricon = Backbone.View.extend({
     tagName: 'i',
@@ -16,6 +22,7 @@ define(function(require){
       }
 
       this.iconMap = options.iconMap;
+      this.fromRaw = options.fromRaw || fromRaw;
 
       this.listenTo(this.model, 'change:' + options.attribute, function(model, value){
         this.addIcon(value);
@@ -26,20 +33,19 @@ define(function(require){
       }
     },
 
+    // set's the className of element to a mapped icon class.
     addIcon: function(value){
-      var iconMap = this.iconMap,
-          icon = iconMap[value];
-
-      Object.keys(iconMap).forEach(function(key){
-        this.$el[key === value ? 'addClass' : 'removeClass'](iconMap[key]);
-      }, this);
+      var val = this.fromRaw(value);
+      var icon = (val in this.iconMap) ? this.iconMap[val] : 'icon-question';
+      this.el.className = icon;
     }
 
   }, {
     Status: {
-      'pending': 'icon-spinner icon-spin',
-      'success': 'icon-check',
-      'error': 'icon-warning-sign'
+      'pending': 'icon-check-empty',
+      'in-progress': 'icon-cog icon-spin',
+      'succeeded': 'icon-check',
+      'failed': 'icon-warning-sign'
     },
 
     OS: {

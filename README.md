@@ -4,7 +4,9 @@ attricon
 An miniscule Backbone view that binds an **icon-** className to the value of a model **attr**ibute.
 
 It's useful with a pre-defined set of attribute values that pair nicely with an icon from Font Awesome (or other).
-E.g. Status, OS icons.
+
+Status, or OS icons for example:
+![attricon](https://raw.github.com/twalker/attricon/master/examples/attricon-example.png "Demo")
 
 What can I say, it scratched a small itch.
 
@@ -15,9 +17,10 @@ What can I say, it scratched a small itch.
       model: model,
       attribute: 'status',
       iconMap: {
-        'pending': 'icon-spinner icon-spin',
-        'success': 'icon-check',
-        'error': 'icon-warning-sign'
+        'pending': 'icon-check-empty',
+        'in-progress': 'icon-cog icon-spin',
+        'succeeded': 'icon-check',
+        'failed': 'icon-warning-sign'
       }
     });
 
